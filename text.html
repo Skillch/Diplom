@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .gallery {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .main-photo {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid #ddd; /* добавляем обводку */
+    }
+
+    .thumbnail-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+    }
+
+    .modal-content img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img class="main-photo" src="img/galery/1.jpg" alt="Main Photo" onclick="openModal(event)">
+    <div class="thumbnail-container">
+      <img class="thumbnail" src="img/galery/2.jpg" alt="Photo 1" onclick="openModal(event)">
+      <img class="thumbnail" src="img/galery/3.jpg" alt="Photo 2" onclick="openModal(event)">
+      <img class="thumbnail" src="img/galery/4.jpg" alt="Photo 3" onclick="openModal(event)">
+      <img class="thumbnail" src="img/galery/5.png" alt="Photo 4" onclick="openModal(event)">
+      <img class="thumbnail" src="img/galery/6.jpg" alt="Photo 5" onclick="openModal(event)">
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+    <span class="next" onclick="plusSlides(1)">&#10095;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="Enlarged Photo">
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+
+    function openModal(event) {
+      const modal = document.getElementById('myModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = event.target.src;
+      slideIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('myModal');
+      modal.style.display = 'none';
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      const modalImg = document.getElementById('modalImg');
+      const thumbnails = document.getElementsByClassName('thumbnail');
+      if (n > thumbnails.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = thumbnails.length }
+      modalImg.src = thumbnails[slideIndex - 1].src;
+    }
+  </script>
+</body>
+</html>

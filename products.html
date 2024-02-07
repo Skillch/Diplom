@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Жидкие обои Silk Plaster</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="products.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fa/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="mainscss/style.css">
+        <!-- Demo CSS (No need to include it into your project) -->
+        <link rel="stylesheet" href="mainscss/demo.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="header__logo" src="img/55.png"></a>
+    <div class="header__contols">
+      <div class="dropdown">
+        <button class="dropbtn">Статьи
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="per.html">Нужно знать</a>
+          <a href="vtor.html">Жидкие обои</a>
+
+        </div>
+      </div>
+      <a href="index.html">Главная</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="products.html">Продукты</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="galerry.html">Галерея</a>
+      
+    </div>
+  </header>
+
+  <section class="about">
+    <canvas class="orb-canvas" id="orb-canvas"></canvas>
+    <div class="about__info">
+      <h1 class="animate__animated animate__backInLeft">Декоративная штукатурка SilkPlaster</h1>
+      <p class="animate__animated animate__backInLeft">Официальный сайт завода-производителя жидких обоев, декоративной
+        штукатурки SILK PLASTER</p>
+      <a href="per.html"> <button class="animate__animated animate__backInLeft">Узнать подробнее <i
+            class="fas fa-arrow-right"></i></button></a>
+    </div>
+    <div class="animate__animated animate__backInRight" class="about__images">
+      <img class="about__sun—image " src="img/sun.png">
+      <img class="about__image" src="img/89.png">
+    </div>
+  </section>
+
+
+
+  <h1 class="perh1">Каталог</h1>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+  <button class="btn" onclick="filterSelection('Gray')"> Серые</button>
+  <button class="btn" onclick="filterSelection('Yellow')"> Желтые</button>
+  <button class="btn" onclick="filterSelection('ArtDesign')"> Art Design</button>
+  <button class="btn" onclick="filterSelection('Miracle')"> Miracle</button>
+</div>
+
+
+
+ <main>
+     
+<div class="cart-modal-overlay">
+    <div class="cart-modal">
+      <i id="close-btn" class="fas fa-times"></i>
+        <h1 class="cart-is-empty">Корзина пустая</h1>
+      
+        <div class="product-rows">
+        </div>
+        <div class="total">
+          <h1 class="cart-total">Всего</h1>
+            <span class="total-price">0₽</span>
+              <button class="purchase-btn">Оплатить</button>
+        </div>
+      </div>
+</div>
+      
+
+  <div class="cart-btn">
+    <i id="cart" class="fas fa-shopping-cart"></i>
+      <span class ="cart-quantity">0</span>
+  </div>
+<!--  products  -->
+
+  
+
+  
+<div class="items-container">
+  <div class="card-1 card filterDiv cars">
+    <img class="product-image" src="img/1008.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1768₽</span>
+  </div>
+  <div class="card-2 card filterDiv ArtDesign">
+    <img class="product-image" src="img/213.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524</span>
+  </div>
+  <div class="card-2 card filterDiv ArtDesign">
+    <img class="product-image" src="img/208.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524₽</span>
+  </div>
+  <div class="card-3 card filterDiv ArtDesign">
+    <img class="product-image" src="img/211.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524₽</span>
+  </div>
+  <div class="card-3 card filterDiv ArtDesign">
+    <img class="product-image" src="img/212.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524₽</span>
+  </div>
+  <div class="card-4 card filterDiv Miracle Yellow">
+    <img class="product-image" src="img/1003.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1768₽</span>
+  </div>
+  <div class="card-5 card filterDiv Miracle Yellow">
+    <img class="product-image" src="img/1004.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1768₽</span>
+  </div>
+  <div class="card-5 card filterDiv Miracle Yellow">
+    <img class="product-image" src="img/1002.jpg" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1768₽</span>
+  </div>
+  <div class="card-5 card filterDiv ArtDesign Gray">
+    <img class="product-image" src="img/207.png" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524₽</span>
+  </div>
+  <div class="card-5 card filterDiv ArtDesign Gray">
+    <img class="product-image" src="img/207.png" alt="">
+    <button class="add-to-cart">Добавить в корзину</button>
+    <span class="product-price">1524₽</span>
+  </div>
+</div>
+
+    
+ </main>
+ </div>
+      
+<!-- ------------------------- -->
+<footer>
+  <div class="footer__container">
+    <div class="footer__group">
+      <h3>Позвонить нам:</h3>
+      <div class="footer__links">
+        <a href="tel:74959999999">+7 (495) 999-99-99</a>
+      </div>
+    </div>
+
+    <div class="footer__group">
+      <h3>Решения для дома:</h3>
+      <div class="footer__links">
+        <a href="#">Грунты и лаки</a>
+        <a href="#">Кельмы и шпатели</a>
+      </div>
+    </div>
+    <div class="footer__group">
+      <h3>Компания</h3>
+      <div class="footer__links">
+        <a href="#">Контакты</a>
+        <a href="#">Вакансии</a>
+        <a href="#">СМИ</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">Silk Plaster © 2024.</div>
+</footer>
+
+<!-- <script src="/fa/js/all.min.js"></script> -->
+<!-- <script src="js/canvas.js"></script> -->
+<script src="js/index.js"></script>
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6293e63d7b967b117991dab3/1g48rmoke';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script> -->
+<!--End of Tawk.to Script-->
+  
+  <script  src="mainscss/script.js"></script>
+  </body>
+</html>
